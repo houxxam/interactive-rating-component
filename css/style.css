@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&display=swap');
+:root{
+    --Orange: #FB7713;
+    --White: #fff;
+    --Light-Grey: hsl(217, 12%, 63%);
+    --Dark-Blue: #1E252F;
+    --Very-Dark-Blue:#141519;
+    --black : #000;
+    --btn-color : #272E38;
+    --Font-size: 15px;
+    --weight-400: 400;
+    --weight-700:700;
+    --main-size : 40px;
+    --second-size : 60px;
+    --main-size-mobile : 20px;
+    --radius: 20px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+body{
+    font-family: "Overpass", sans-serif;
+    font-weight: var(--weight-400);
+    background-color: var(--Very-Dark-Blue);
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+    height: 100vh;
+}
+.rounded{
+    border-radius: 50%;
+}
+.hidden{
+    display: none !important
+}
+
+.active{
+    background-color: var(--White) !important;
+    color: var(--Dark-Blue) !important;
+}
+.rating-box,.thank-you-box{
+    background-color: var(--Dark-Blue);
+    padding: 25px;
+    margin: 0 var(--main-size);
+    border-radius: var(--main-size);
+    width: 500px;
+    align-self: center;
+    position: relative;
+}
+
+
+.rating-box .star{
+    background-color: var(--btn-color);
+    width: var(--main-size);
+    height: var(--main-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--main-size);
+}
+.rating-box .rating-title{
+    font-size: 2em;
+    font-weight: var(--weight-700);
+    margin-bottom: var(--main-size);
+}
+.rating-box .rating-message{
+    margin-bottom: var(--main-size);
+    color: var(--Light-Grey);
+}
+.rating-box .rating{
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: var(--main-size);
+}
+.rating-box .rating button{
+    width: var(--second-size);
+    height: var(--second-size);
+    background-color: var(--btn-color);
+    color: var(--Light-Grey);
+    font-weight: var(--weight-700);
+    cursor: pointer;
+    margin-bottom: var(--main-size);
+}
+.rating-box .rating button:hover{
+    background-color: var(--Orange);
+    color: var(--White);
+}
+.rating-box .submit-btn button{
+    background-color: var(--White);
+    color: var(--Dark-Blue);
+    width: 100%;
+    height: 50px;
+    border-radius: var(--radius);
+    
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    font-weight: var(--weight-700);
+   
+}
+.rating-box .submit-btn button:hover{
+    background-color: var(--Orange);
+
+}
+
+.thank-you-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}   
+.thank-you-box .thank-you-image{
+    margin-bottom: var(--main-size);
+}   
+.thank-you-box .thank-you-score p{
+    background-color: var(--btn-color);
+    padding: 5px 25px;
+    border-radius: 10px;
+    margin-bottom: var(--main-size);
+    color: var(--Orange);
+
+}   
+.thank-you-box .thank-you-title{
+   margin-bottom: var(--main-size);
+   font-size: 1.3em;
+}   
+.thank-you-box .thank-you-message{
+   color: var(--Light-Grey);
+   margin-bottom: var(--Font-size);
+}   
+.error{
+    color: var(--Orange) !important;
+    text-align: center;
+    padding: 15px;
+    text-transform: capitalize;
+    margin-right: -10px;
+}
+
+
+/* Responsive Media on 375px and lower*/
+@media(max-width:525px){
+    .rating-box{
+        width: calc(100% - var(--main-size-mobile));
+        
+    }
+    .rating-box .rating-title{
+        font-size: 1.8em;
+        margin-bottom: var(--main-size-mobile);
+    }
+    .rating-box .rating-message{
+        margin-bottom: var(--main-size-mobile);
+    }
+    .rating-box .rating button{
+        margin-bottom: var(--main-size-mobile);
+        
+ 
+    }
+}

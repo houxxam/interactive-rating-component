@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Interactive rating component</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Rating state start -->
+
+  <div class="rating-box">
+    <div class="star rounded"><img src="images/icon-star.svg" alt=""></div>
+    <div class="rating-title">How did we do?</div>
+    <div class="rating-message">  Please let us know how we did with your support request. All feedback is appreciated 
+      to help us improve our offering!</div>
+    <div class="rating">
+      <button class="rating-btn rounded" value="1">1</button>
+      <button class="rating-btn rounded" value="2">2</button>
+      <button class="rating-btn rounded" value="3">3</button>
+      <button class="rating-btn rounded" value="4">4</button>
+      <button class="rating-btn rounded" value="5">5</button>
+    </div>
+    <div class="submit-btn">
+      <button>submit</button>
+    </div>
+    <div class="error hidden">select rating plz</div>
+  </div>
+
+  <!-- Rating state end -->
+
+  <!-- Thank you state start -->
+  <div class="thank-you-box hidden">
+    <div class="thank-you-image"><img src="images/illustration-thank-you.svg" alt=""></div>
+    <div class="thank-you-score"><p>You selected <span class="rating-result"></span> out of 5</p></div>
+    <div class="thank-you-title"><h2>Thank you!</h2></div>
+    <div class="thank-you-message">
+      We appreciate you taking the time to give a rating. If you ever need more support, 
+  don’t hesitate to get in touch!
+    </div>
+  </div>
+
+ 
+
+
+
+  <!-- Thank you state end -->
+
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="js/app.js"></script>
+</body>
+</html>
